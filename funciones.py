@@ -37,3 +37,13 @@ elif opcion == 3:
     conversacion('Elegiste la opción 3')
 else:
     print('Escribe una opción valida')
+
+
+# return es un operador que se utiliza para aprovechar el valor o resultado
+# que nos devuelve una función para poder utilizarlo en el código más adelante.
+def suma(a, b):
+    return a + b
+
+
+valor_suma = suma(1, 4)
+print(valor_suma)
