@@ -6,6 +6,13 @@ round(): Redondea un flotante con una cantidad de decimales especifico
 print(): Nos imprime un valor
 """
 
+
+def conversor(tipo_pesos, valor_dolar):
+    pesos = float(input('¿Cuántos pesos ' + tipo_pesos + ' tienes? '))
+    dolares = str(round((pesos / valor_dolar), 2))
+    print('Tienes $' + dolares + ' dólares')
+
+
 menu = '''
 Bienvenido al conversor de monedas 💰
 
@@ -19,19 +26,10 @@ Elige una opción:
 opcion = int(input(menu))
 
 if opcion == 1:
-    pesos = float(input('¿Cuántos pesos méxicanos tienes? '))
-    dolar_peso = 20.5
-    dolares = str(round((pesos / dolar_peso), 2))
-    print('Tienes $' + dolares + ' dólares')
+    conversor("mexicanos", 20.5)
 elif opcion == 2:
-    pesos = float(input('¿Cuántos pesos colombianos tienes? '))
-    dolar_peso = 3900
-    dolares = str(round((pesos / dolar_peso), 2))
-    print('Tienes $' + dolares + ' dólares')
+    conversor("colombianos", 3900)
 elif opcion == 3:
-    pesos = float(input('¿Cuántos pesos argentinos tienes?'))
-    dolar_peso = 100
-    dolares = str(round((pesos / dolar_peso), 2))
-    print('Tienes $' + dolares + ' dólares')
+    conversor("argentinos", 100)
 else:
     print('Ingresa una opcion')
